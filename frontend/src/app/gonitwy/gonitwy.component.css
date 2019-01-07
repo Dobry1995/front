@@ -1,0 +1,17 @@
+table,tr,td{
+    border: 1px solid #0e4892;
+    background-color: yellowgreen;
+
+}
+table{
+    width: 75%;
+
+}
+tr{
+    height: 50px;
+}
+td{
+    text-align: center;
+    
+
+}

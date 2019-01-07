@@ -1,0 +1,13 @@
+<h1>Administrator serwis</h1>
+<p>Tylko dla admina</p>
+<div>
+  <h3>All registered users:</h3>
+  <ul>
+    <tr *ngFor="let gracz of gracze">
+        <td>{{gracz.login}}</td>
+        <td>{{gracz.imie}}</td>
+        <td>{{gracz.nazwisko}}</td>
+      </tr>
+  </ul>
+</div>
+

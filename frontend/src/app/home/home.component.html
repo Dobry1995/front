@@ -1,0 +1,22 @@
+
+<h1>STRONA GŁÓWNA</h1>
+<h1>Hi  {{currentUser.imie}}!</h1>
+<p>You're logged in with Angular 6!!</p>
+<p>Your role is: <strong>{{currentUser.rola}}</strong>.</p>
+<p>This page can be accessed by all authenticated users.</p>
+<div>
+        Current user from secure api end point:
+        <ul *ngIf="userFromApi">
+            <li>{{userFromApi.imie}} {{userFromApi.nazwisko}}</li>
+            
+        </ul>
+    </div>
+<div>
+
+<p><a routerLink="/login" class="btn btn-link">Logowanie<br/></a></p>
+<p><a routerLink="/register" class="btn btn-link">Rejestracja<br/></a></p>
+<p><a routerLink="/wierzchowiec" class="btn btn-link">Wierzch <br/></a></p>
+<p><a  routerLink="/admin" class="btn btn-link">admin</a></p> 
+
+
+</div>

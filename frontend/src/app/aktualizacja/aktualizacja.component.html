@@ -1,0 +1,36 @@
+<h1>Aktualizacja danych</h1>
+<form [formGroup]="updateForm" (ngSubmit)="onSubmit()">
+  <div class="update-Form">
+    <label for="Imie">Imie</label>
+    <input type="text" formControlName="Imie"/>
+  </div>
+
+  <div class="update-Form">
+    <label for="Nazwisko">Nazwisko</label>
+    <input type="text" formControlName="Nazwisko" />
+
+  </div>
+  <div class="update-Form">
+    <label for="Login">Login</label>
+    <input type="text" formControlName="Login" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Login.errors }"/>
+    <div *ngIf="submitted && f.Login.errors" class="invalid-feedback">
+        <div class="required_link" *ngIf="f.Login.errors.required">Username is required</div>
+    </div>
+  </div>
+  <div class="update-Form">
+    <label for="Email">Email</label>
+    <input type="text" formControlName="Email" />
+  </div>
+  <div class="update-Form">
+    <label for="Wiek">Wiek</label>
+    <input type="number" formControlName="Wiek" />
+  </div>
+  <div class="update-Form">
+    <label for="Wyksztalcenie">Wyksztalcenie</label>
+    <input type="text" formControlName="Wyksztalcenie" />
+  </div>
+  <div class="update-Form">
+      <button [disabled]="loading" class="btn btn-primary">Zapisz zmiany</button>
+      <button [routerLink]="['/moje-konto']" class="btn btn-link">Wróć<br/></button>
+  </div>
+</form>

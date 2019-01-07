@@ -1,0 +1,33 @@
+<h1 class="headers">Moje konto</h1>
+
+<div>
+    <table>
+      <tr>
+        <th>Imię:</th>
+        <td *ngIf="graczApi">{{graczApi.imie}}</td>
+      </tr>
+      <tr>
+        <th>Nazwisko:</th>
+        <td *ngIf="graczApi">{{graczApi.nazwisko}}</td>
+      </tr>
+      <tr>
+      <th>Login:</th>
+      <td *ngIf="graczApi">{{graczApi.login}}</td>
+    </tr>
+    <tr>
+      <th>Email:</th>
+      <td *ngIf="graczApi">{{graczApi.email}}</td>
+    </tr>
+    <tr>
+    <th>Wiek:</th>
+    <td *ngIf="graczApi">{{graczApi.wiek}}</td>
+    </tr>
+  <tr>
+    <th>Wykształcenie:</th>
+    <td *ngIf="graczApi">{{graczApi.wyksztalcenie}}</td>
+  </tr>
+    </table>
+    <p></p>
+    <button routerLink="/aktualizacja">Aktualizuj dane</button>
+    <button routerLink="/zmiana-hasla">Zmiana hasla</button>
+</div>

@@ -1,0 +1,45 @@
+<h1>Gonitwy </h1>
+
+<div> 
+  <h3>Tabela gonitw które się odbyły</h3>
+  <table>
+  <tr>
+    <td> Numer Sezonowy Gonitwy:</td>
+    <td>Wyscig o:</td>
+    <td>Godzina startu:</td>
+    <td>Data:</td>
+    <td>Dystans wyscigu(m):</td>
+    <td>Wiecej informacji:</td>
+  </tr>
+  <tr *ngFor="let g of gonitwy">
+    <td>{{g.nrGonitwyWSezonie}}</td>
+    <td>{{g.nazwaNagrody}}</td>
+    <td>{{g.godzinaRozpoczecia}}</td>
+    <td>{{g.data| date:'yyyy-MM-dd'}}</td>
+    <td>{{g.dlugosc}}</td>
+    <td class="buttons-gonitwy" [routerLink]="['/szczegoly-wyscigu',g.nrGonitwyWSezonie]">Tutaj </td>
+  </tr>
+</table>
+</div>
+
+<div>
+  <h3>Tabela gonitw które się odbedą</h3>
+  <table>
+    <tr>
+      <td> Numer Sezonowy Gonitwy:</td>
+      <td>Wyscig o:</td>
+      <td>Godzina startu:</td>
+      <td>Data:</td>
+      <td>Dystans wyscigu(m):</td>
+      <td>Wiecej informacji:</td>
+    </tr>
+    <tr *ngFor="let g of gonitwyFuture">
+      <td>{{g.nrGonitwyWSezonie}}</td>
+      <td>{{g.nazwaNagrody}}</td>
+      <td>{{g.godzinaRozpoczecia}}</td>
+      <td>{{g.data| date:'yyyy-MM-dd'}}</td>
+      <td>{{g.dlugosc}}</td>
+      <td class="buttons-gonitwy" [routerLink]="['/szczegoly-wyscigu',g.nrGonitwyWSezonie]">Tutaj </td>
+    </tr>
+  </table>
+</div>

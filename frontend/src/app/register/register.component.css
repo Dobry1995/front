@@ -1,0 +1,29 @@
+.btn-link{
+    background-color: #1e995b; 
+    color: black;
+    border: 2px solid black;
+    padding: 10px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.btn-primary{
+    background-color: #832121; 
+    color: black;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.required_link{
+    background-color: green;
+    color: red;
+    width: 25%;
+
+    border: none;
+    font-size: 16px;
+    font-family: cursive;
+}

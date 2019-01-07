@@ -1,0 +1,47 @@
+
+<h2 class="title_head">Register </h2>
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="Imie">Imie</label>
+        <input type="text" formControlName="Imie" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Imie.errors }" />
+        <div *ngIf="submitted && f.Imie.errors" class="invalid-feedback">
+            <div class="required_link" *ngIf="f.Imie.errors.required">First Name is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Nazwisko">Nazwisko</label>
+        <input type="text" formControlName="Nazwisko" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Nazwisko.errors }" />
+        <div *ngIf="submitted && f.Nazwisko.errors" class="invalid-feedback">
+            <div class="required_link" *ngIf="f.Nazwisko.errors.required">Last Name is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Login">Login</label>
+        <input type="text" formControlName="Login" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Login.errors }" />
+        <div *ngIf="submitted && f.Login.errors" class="invalid-feedback">
+            <div class="required_link" *ngIf="f.Login.errors.required">Username is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Haslo">Haslo</label>
+        <input type="Haslo" formControlName="Haslo" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Haslo.errors }" />
+        <div *ngIf="submitted && f.Haslo.errors" class="invalid-feedback">
+            <div class="required_link" *ngIf="f.Haslo.errors.required">Password is required</div>
+            <div class="required_link" *ngIf="f.Haslo.errors.minlength">Password must be at least 6 characters</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="hidden" formControlName="Rola" class="form-contorl" />
+
+    </div>
+    <div class="form-group">
+        <button [disabled]="loading" class="btn btn-primary">Register</button>
+        
+        <a [routerLink]="['/login']" class="btn btn-link">Cancel<br/></a>
+        <a routerLink="/home" class="btn btn-link">Home</a>
+    </div>
+    
+</form>
+
+<p>Wartosci: {{registerForm.value | json}}</p>
+<p>Status: {{registerForm.status | json}}</p>

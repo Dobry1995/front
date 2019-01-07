@@ -1,0 +1,23 @@
+<h1>Szczegoły wyścigu:</h1>
+<h2>Dane taktyczne:</h2>
+<ul >
+  <li>Nazwa nagrody: {{szczegoly?.nazwaNagrody}}</li>
+  <li>Warunki gonitwy: {{szczegoly?.warunkiGonitwy}}</li>
+  <li>Data: {{szczegoly?.data}}</li>
+  <li>Godzina: {{szczegoly?.godzinaRozpoczecia}}</li>
+  <li>Dlugosc wyscigu: {{szczegoly?.dlugosc}}</li>
+  
+</ul>
+<h2>Lista wyscigowa</h2>
+<table>
+  <td>Numer wierzchowca</td>
+  <td>Nazwa wierzchowca</td>
+  <td>Nr dżokeja</td>
+  <td>Imię i nazwisko dżokeja</td>
+  <tr *ngFor="let l of lista">
+    <td>{{l.nrWierzchowca}}</td>
+    <td>{{l.nazwaWierzchowca}}</td>
+    <td>{{l.nrDzokeja}}</td>
+    <td>{{l.imie}} {{l.nazwisko}}</td>
+  </tr>
+</table>
